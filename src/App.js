@@ -8,7 +8,7 @@ import Connected from "./components/connected/Connected";
 
 function App() {
   const [isConnected, setIsConnected] = useState(false);
-  const [currentAccount, setCurrentAccount] = useState(null);
+  const [currentAccount, setCurrentAccount] = useState("");
   const onConnect = async (provider) => {
     const web3 = new Web3(provider);
     const accounts = await web3.eth.getAccounts();
@@ -30,7 +30,7 @@ function App() {
       {!isConnected && (
         <Connect onConnect={onConnect} onDisconnect={onDisconnect} />
       )}
-      {isConnected && <Connected currentAccount={currentAccount} />}
+       {isConnected && <Connected currentAccount={currentAccount} />}
       <h1>Ethereal Apes</h1>
       <AddressList currentAccount={currentAccount} />
       <Footer />

@@ -2,7 +2,6 @@ import React from "react";
 import "../Connect.scss";
 import { useState } from "react";
 import { Toast, ToastContainer } from "react-bootstrap";
-
 function Connected({ currentAccount }) {
   const [show, setShow] = useState(false);
 
