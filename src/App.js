@@ -6,6 +6,8 @@ import Web3 from "web3";
 import Footer from "./components/Footer";
 import Connected from "./components/connected/Connected";
 
+
+
 function App() {
   const [isConnected, setIsConnected] = useState(false);
   const [currentAccount, setCurrentAccount] = useState("");
