@@ -1,0 +1,24 @@
+.addressList{
+    margin: 70px auto;
+    max-width: 600px;
+    box-shadow: 1px 1px 1px gray;
+    background-color: white;
+    border-radius: 10px;
+    height: 80vh;
+    overflow-y: scroll;
+    font-family: 'Raleway', sans-serif;
+}
+
+.walletScores {
+    padding: 20px;
+    border-bottom: 1px solid  #edeced;
+    display: flex;
+    scroll-behavior: smooth;
+
+}
+
+.addressList__title{
+    text-align: center;
+    font-family: Azonix;
+    
+}
