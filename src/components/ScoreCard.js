@@ -7,7 +7,7 @@ function ScoreCard({ wallet, index, currentAccount }) {
       {wallet[0] === currentAccount ? (
         <div className="scoreCardFound">
           <div> {index + 1} </div>
-          <div className="found"> {wallet[0]}: </div>
+          <div> {wallet[0]}: </div>
           <div> {wallet[1].toFixed()} </div>
         </div>
       ) : (
