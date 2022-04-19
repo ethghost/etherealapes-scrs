@@ -7,7 +7,7 @@ import LoadingView from "./LoadingView";
 import "./AddressList.scss"
 
 
-function AddressList({currentAccount}) {
+function AddressList({currentAccount, connected, ens}) {
   const API = apiURL();
   const [wallets, setWallets] = React.useState({});
   const [loading, setLoading] = React.useState(true);
@@ -22,14 +22,31 @@ function AddressList({currentAccount}) {
     setLoading(false);
     setWallets(res.data.scoreData.wallets);
   };
+  
+  let sortable = []
+  for(let wallet in wallets){
+    sortable.push([wallet, wallets[wallet]])
+  }
+  const sortedAdress = sortable.sort((a,b) => {
+    return b[1] - a[1]
+  })
 
   return (
     <div className="addressList">
       <h3 className="addressList__title">Wallet Scores</h3>
       {loading && <LoadingView />}
-      {Object.entries(wallets).map((wallet, i) => {
+      {/* {Object.entries(wallets).map((wallet, i) => {
+        console.log(wallet)
         return (
-          <ScoreCard currentAccount={currentAccount} key={i} wallet={wallet} index={i}/>
+          <ScoreCard connected={connected} currentAccount={currentAccount} key={i} wallet={wallet} index={i}/>
+        )
+      })} */}
+      {/* {Object.keys(wallets).sort((a,b) => (
+
+      ))} */}
+      {sortedAdress.map((wallet, i) => {
+        return (
+          <ScoreCard connected={connected} currentAccount={currentAccount} key={i} wallet={wallet} index={i} ens={ens}/>
         )
       })}
     </div>
