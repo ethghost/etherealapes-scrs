@@ -6,8 +6,6 @@ import Web3 from "web3";
 import Footer from "./components/Footer";
 import Connected from "./components/connected/Connected";
 
-
-
 function App() {
   const [isConnected, setIsConnected] = useState(false);
   const [currentAccount, setCurrentAccount] = useState("");
@@ -33,7 +31,7 @@ function App() {
         <Connect onConnect={onConnect} onDisconnect={onDisconnect} />
       )}
        {isConnected && <Connected currentAccount={currentAccount} />}
-      <h1>Ethereal Apes</h1>
+      <h1>ETHEREAL APES</h1>
       <AddressList currentAccount={currentAccount} connected={isConnected} />
       <Footer />
     </div>

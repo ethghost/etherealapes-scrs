@@ -35,15 +35,6 @@ function AddressList({currentAccount, connected}) {
     <div className="addressList">
       <h3 className="addressList__title">Wallet Scores</h3>
       {loading && <LoadingView />}
-      {/* {Object.entries(wallets).map((wallet, i) => {
-        console.log(wallet)
-        return (
-          <ScoreCard connected={connected} currentAccount={currentAccount} key={i} wallet={wallet} index={i}/>
-        )
-      })} */}
-      {/* {Object.keys(wallets).sort((a,b) => (
-
-      ))} */}
       {sortedAdress.map((wallet, i) => {
         return (
           <ScoreCard connected={connected} currentAccount={currentAccount} key={i} wallet={wallet} index={i}/>

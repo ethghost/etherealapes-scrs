@@ -11,7 +11,7 @@ function Connected({ currentAccount }) {
     <div className="connect">
       <ToastContainer className="toast-container" position="bottom-end">
         <Toast onClose={() => setShow(false)} show={show} delay={3000} autohide>
-          <Toast.Body style={{ color: "green", fontFamily: "Azonix" }}>
+          <Toast.Body style={{ color: "green", fontFamily: 'Share Tech' }}>
             Your wallet is connected!
           </Toast.Body>
         </Toast>
