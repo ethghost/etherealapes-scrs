@@ -1,7 +1,7 @@
 import React from "react";
 import "./ScoreCard.scss";
 
-function ScoreCard({ wallet, index, currentAccount, connected, ens }) {
+function ScoreCard({ wallet, index, currentAccount, connected}) {
 
   return (
     <div>
@@ -16,7 +16,6 @@ function ScoreCard({ wallet, index, currentAccount, connected, ens }) {
           <div> {index + 1} </div>
           <div> {wallet[0]} </div> 
           <div>{ens}</div>
-          {/* <div> : </div> */}
           <div> {wallet[1].toFixed()} </div>
 
         </div>

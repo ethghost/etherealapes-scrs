@@ -7,7 +7,7 @@ import LoadingView from "./LoadingView";
 import "./AddressList.scss"
 
 
-function AddressList({currentAccount, connected, ens}) {
+function AddressList({currentAccount, connected}) {
   const API = apiURL();
   const [wallets, setWallets] = React.useState({});
   const [loading, setLoading] = React.useState(true);
@@ -46,7 +46,7 @@ function AddressList({currentAccount, connected, ens}) {
       ))} */}
       {sortedAdress.map((wallet, i) => {
         return (
-          <ScoreCard connected={connected} currentAccount={currentAccount} key={i} wallet={wallet} index={i} ens={ens}/>
+          <ScoreCard connected={connected} currentAccount={currentAccount} key={i} wallet={wallet} index={i}/>
         )
       })}
     </div>
