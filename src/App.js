@@ -34,7 +34,7 @@ function App() {
       )}
        {isConnected && <Connected currentAccount={currentAccount} />}
       <h1>Ethereal Apes</h1>
-      <AddressList currentAccount={currentAccount} connected={isConnected} ens={ensDomain}/>
+      <AddressList currentAccount={currentAccount} connected={isConnected} />
       <Footer />
     </div>
   );
